@@ -2,7 +2,7 @@ _ = require 'lodash'
 CallbackComponent = require 'nanocyte-component-callback'
 
 class HttpRequest extends CallbackComponent
-  constructor: (options, dependencies) ->
+  constructor: (options, dependencies={}) ->
     {@request} = dependencies
     @request ?= require 'request'
     super
