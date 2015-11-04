@@ -16,7 +16,7 @@ describe 'HttpRequest', ->
         @sut.onEnvelope {message: {url: 'anything'}}, @callback
 
       it 'should call request', ->
-        expect(@request).to.have.been.calledWith url: 'anything', timeout: 30
+        expect(@request).to.have.been.calledWith url: 'anything', timeout: 30000
 
       describe 'when request yields', ->
         beforeEach ->

@@ -8,7 +8,7 @@ class HttpRequest extends CallbackComponent
     super
 
   onEnvelope: (envelope, callback) =>
-    message = _.defaults timeout: 30, envelope.message
+    message = _.defaults timeout: 30000, envelope.message
     @request message, (error, response) =>
       return callback error if error?
       callback null, _.pick(response, 'body', 'statusCode')
